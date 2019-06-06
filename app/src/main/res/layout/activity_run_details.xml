@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ViewSavedRuns">
+
+
+        <RelativeLayout
+            android:id="@+id/horizontalBasics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+
+            android:orientation="horizontal">
+            <!--TODO: Change these text views to spinners, EditText, etcs. so that user can edit-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="loading"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="loading"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/runsHeaderHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontalBasics">
+
+            <TextView
+                android:id="@+id/WeatherHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:text="Weather"
+                android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+                android:textSize="25dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/horizontalWeatherData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/runsHeaderHorizontal"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!--TODO: Change these text views to spinners, EditText, etcs. so that user can edit-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/conditionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/tempText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/humidityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/windsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/runHeaderHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontalWeatherData">
+
+            <TextView
+                android:id="@+id/RunDataHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:text="Run Metrics"
+                android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+                android:textSize="25dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/horizontalRunData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/runHeaderHorizontal"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!--TODO: Change these text views to spinners, EditText, etcs. so that user can edit-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/DistanceWidget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:text="0.00 miles"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/TimeWidget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:text="00:00:00.00"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/paceWidget"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:text="0:00 / mi"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notesheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontalRunData"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Notes"
+            android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+            android:textSize="25dp" />
+
+
+        <EditText
+            android:id="@+id/notesWidget"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/notesheader"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center"
+            android:hint="Notes"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</ScrollView>

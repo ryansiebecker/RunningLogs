@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/trackbackground"
+    android:id="@+id/mainView"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/dateTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="45dp"
+        android:text="Tuesday, May 14th"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_settings_black_24dp" />
+
+    <ImageView
+        android:id="@+id/LogoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateTextField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/runningtext" />
+
+    <Button
+        android:id="@+id/newRunButton"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_above="@id/viewRunsButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="85dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/transparent_bg_bordered"
+        android:text="New Run"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/viewRunsButton"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="85dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/transparent_bg_bordered"
+        android:text="View All Runs"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

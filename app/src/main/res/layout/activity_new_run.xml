@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ViewSavedRuns">
+
+        <EditText
+            android:id="@+id/titleEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Title"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="25dp" />
+
+
+        <RelativeLayout
+            android:id="@+id/horizontalBasics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleEdit"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+
+            android:orientation="horizontal">
+            <!--TODO: Change these text views to spinners, EditText, etcs. so that user can edit-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="loading"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="loading"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/calendarButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/transparent_bg_bordered"
+                android:src="@drawable/ic_date_range_black_24dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/runsHeaderHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontalBasics">
+
+            <TextView
+                android:id="@+id/WeatherHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:text="Weather"
+                android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+                android:textSize="25dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weatherEditButton"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_edit_black_24dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/horizontalWeatherData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/runsHeaderHorizontal"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!--TODO: Change these text views to spinners, EditText, etcs. so that user can edit-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/conditionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/tempText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/humidityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/windsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/runHeaderHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontalWeatherData">
+
+            <TextView
+                android:id="@+id/RunDataHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:text="Run Metrics"
+                android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+                android:textSize="25dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/RunEditButton"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_edit_black_24dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/horizontalRunData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/runHeaderHorizontal"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!--TODO: Change these text views to spinners, EditText, etcs. so that user can edit-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/DistanceWidget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:text="0.00 miles"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/TimeWidget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:text="0:00:00"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/paceWidget"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:focusable="false"
+                    android:gravity="center_horizontal"
+                    android:text="0:00 / mi"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/scanWatchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/transparent_bg_borderedtrack"
+                    android:padding="20dp"
+                    android:text="Scan Watch"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notesheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontalRunData"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Notes"
+            android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+            android:textSize="25dp" />
+
+
+        <EditText
+            android:id="@+id/notesWidget"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/notesheader"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center"
+            android:hint="Notes"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SaveHeader"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="25dp">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent_bg_borderedtrack"
+                android:padding="20dp"
+                android:text="Cancel"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent_bg_borderedtrack"
+                android:padding="20dp"
+                android:text="Save Run"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/SaveHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notesWidget"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Save Run"
+            android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+</ScrollView>

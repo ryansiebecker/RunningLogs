@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ViewSavedRuns">
+
+        <TextView
+            android:id="@+id/titleEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="Weekly Summary"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="25dp" />
+
+
+        <RelativeLayout
+            android:id="@+id/horizontalBasics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleEdit"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dateBeginning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="loading"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/dateEnding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="loading"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/runsHeaderHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontalBasics">
+
+            <TextView
+                android:id="@+id/WeatherHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:text="Runs"
+                android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+                android:textSize="25dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/horizontalRunsData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/runsHeaderHorizontal"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!--TODO: Change these text views to spinners, EditText, etcs. so that user can edit-->
+
+
+                <EditText
+                    android:id="@+id/numberOfRuns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/totalMileage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:text="loading"
+                    android:layout_marginStart="45dp"
+                    android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horizontalRunsData"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="25dp">
+
+            <Button
+                android:id="@+id/viewButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent_bg_borderedtrack"
+                android:padding="20dp"
+                android:layout_marginTop="50dp"
+                android:text="View Runs"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
